@@ -1,0 +1,124 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+# Content may be incomplete and subject to change.
+# This file is read-only and should only be used to review changes made within Power Apps Studio.
+# This file isn't used when loading the app. External editing, merging and conflict resolution are
+# not supported.
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  Search:
+    Children:
+      - RectQuickActionBar1:
+          Control: Rectangle@2.3.0
+          Properties:
+            Fill: =RGBA(51, 0, 153, 1)
+            Height: =114
+            Width: =Parent.Width
+      - TextSearchBox1:
+          Control: Classic/TextInput@2.3.2
+          Properties:
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Default: =selectedLocation
+            HintText: ="Search Your  Preffered Location"
+            HoverBorderColor: =
+            HoverFill: =
+            OnChange: |+
+              =UpdateContext({ selectedLocation: TextSearchBox1.Text })
+            PaddingLeft: =90
+            PressedBorderColor: =
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Width: =Parent.Width - Self.X * 2
+            Y: =192
+      - SearchIcon1:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            Height: =Self.Width
+            Icon: =Icon.Search
+            PaddingBottom: =14
+            PaddingLeft: =14
+            PaddingRight: =14
+            PaddingTop: =14
+            Tooltip: ="Search"
+            Width: =TextSearchBox1.Height
+            X: =23
+            Y: =TextSearchBox1.Y
+      - RectSeparator1:
+          Control: Rectangle@2.3.0
+          Properties:
+            Fill: =App.Theme.Colors.Darker30
+            Height: =1
+            Width: =Parent.Width - Self.X * 2
+            Y: =TextSearchBox1.Y + TextSearchBox1.Height
+      - iconEmptyState1:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            DisplayMode: =DisplayMode.View
+            Icon: =Icon.Person
+            Visible: =
+            X: =Parent.Width / 2 - Self.Width/2
+            Y: =Parent.Height / 2 - Self.Height / 2 - 100
+      - Button4:
+          Control: Classic/Button@2.2.0
+          Properties:
+            BorderColor: =RGBA(51, 0, 153, 1)
+            Color: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(51, 0, 153, 1)
+            HoverColor: =RGBA(255, 255, 255, 1)
+            OnSelect: |+
+              =If(
+                  !IsBlank(TextSearchBox1.Text),
+                  If(
+                      TextSearchBox1.Text = "Lekki Phase 1", Navigate('Lekki Area', ScreenTransition.None, {selectedLocation: TextSearchBox1.Text}),
+                      TextSearchBox1.Text = "Ikoyi", Navigate(Ikoyi, ScreenTransition.None, {selectedLocation: TextSearchBox1.Text}),
+                      TextSearchBox1.Text = "Victoria Island", Navigate(VI, ScreenTransition.None, {selectedLocation: TextSearchBox1.Text}),
+                       TextSearchBox1.Text = "Lagos Island", Navigate(Island, ScreenTransition.None, {selectedLocation: TextSearchBox1.Text}),
+                      Notify("No Listing Yet ", NotificationType.Error)
+                  ),
+                  Notify("Please enter a location", NotificationType.Error)
+              )
+
+            Text: ="Search"
+            X: =159
+            Y: =860
+      - ComboBox1:
+          Control: Classic/ComboBox@2.4.0
+          Properties:
+            BorderColor: =
+            BorderThickness: =0
+            ChevronBackground: =RGBA(0, 0, 0, 0)
+            ChevronDisabledBackground: =RGBA(184, 0, 0, 1)
+            ChevronFill: =RGBA(255, 255, 255, 1)
+            ChevronHoverBackground: =
+            ChevronHoverFill: =RGBA(0, 0, 0, 0)
+            DisplayFields: =["Value"]
+            FontWeight: =FontWeight.Semibold
+            Height: =82
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Items: =Filter(Choices(Admin1.Location), StartsWith(Value, TextSearchBox1.Text))
+            OnChange: |+
+              =UpdateContext({ selectedLocation: ComboBox1.Selected.Value });
+              UpdateContext({ selectedLocation: ComboBox1.Selected.Value });
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =
+            SearchFields: =["Value"]
+            SelectMultiple: =false
+            SelectionColor: =RGBA(255, 255, 255, 1)
+            SelectionFill: =
+            Visible: =!IsBlank(TextSearchBox1.Text)
+            Width: =629
+            X: =11
+            Y: =282
+      - Icon11:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            Color: =RGBA(255, 255, 255, 1)
+            Icon: =Icon.ArrowLeft
+            OnSelect: =Navigate('Home Screen',ScreenTransition.CoverRight)
+            X: =29
+            Y: =25

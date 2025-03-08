@@ -1,0 +1,278 @@
+"'Login Screen' As screen":
+    BackgroundImage: =
+    Fill: =Color.White
+    ImagePosition: =ImagePosition.Stretch
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+    OnVisible: |-
+        =Set(Labeltxt,false);
+        UpdateContext({Var_Password_Visible: !Var_Password_Visible});
+
+    Container8 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.ExtraBold
+        Height: =1136
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =640
+        ZIndex: =13
+
+        Label1_3 As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(51, 0, 153, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            FontWeight: =FontWeight.Semibold
+            Height: =70
+            Size: =25
+            Text: ="Password"
+            Width: =560
+            X: =29
+            Y: =523
+            ZIndex: =1
+
+        Label1_4 As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(51, 0, 153, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            FontWeight: =FontWeight.Semibold
+            Height: =70
+            Size: =26
+            Text: ="UserName/Email"
+            Width: =560
+            X: =29
+            Y: =370
+            ZIndex: =2
+
+        TextInput1_2 As text:
+            BorderColor: =RGBA(51, 0, 153, 1)
+            BorderThickness: =2
+            Color: =RGBA(0, 0, 0, 1)
+            Default: =""
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =4
+            Font: =App.Theme.Font
+            Height: =72
+            HintText: ="example@gmail.com"
+            HoverBorderColor: =App.Theme.Colors.Darker40
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Set(Labeltxt,false)
+            PressedBorderColor: =RGBA(51, 0, 153, 1)
+            RadiusBottomLeft: =25
+            RadiusBottomRight: =25
+            RadiusTopLeft: =25
+            RadiusTopRight: =25
+            Size: =21
+            Width: =581
+            X: =29
+            Y: =440
+            ZIndex: =3
+
+        TextInput1_3 As text:
+            BorderColor: =RGBA(51, 0, 153, 1)
+            BorderThickness: =2
+            Color: =RGBA(0, 0, 0, 1)
+            Default: =""
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =4
+            Font: =App.Theme.Font
+            Height: =69
+            HintText: =""
+            HoverBorderColor: =App.Theme.Colors.Darker40
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Mode: =If(Var_Password_Visible,TextMode.SingleLine, TextMode.Password)
+            OnSelect: =
+            RadiusBottomLeft: =25
+            RadiusBottomRight: =25
+            RadiusTopLeft: =25
+            RadiusTopRight: =25
+            Size: =21
+            Width: =581
+            X: =29
+            Y: =593
+            ZIndex: =4
+
+        Button1_1 As button:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderThickness: =0
+            Color: =RGBA(255, 136, 0, 1)
+            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(0, 0, 0, 0)
+            DisabledFill: =RGBA(0, 0, 0, 0)
+            Fill: =RGBA(0, 0, 0, 0)
+            Font: =App.Theme.Font
+            FontWeight: =FontWeight.Semibold
+            Height: =44
+            HoverBorderColor: =
+            HoverColor: =RGBA(184, 0, 0, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            OnSelect: =Navigate('Sign Up',ScreenTransition.Cover)
+            PressedBorderColor: =
+            PressedColor: =Self.Color
+            PressedFill: =
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =24
+            Text: ="Sign Up"
+            Width: =156
+            X: =433
+            Y: =985
+            ZIndex: =5
+
+        Image1 As image:
+            BorderColor: =App.Theme.Colors.Darker40
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =330
+            Image: ='MY AGENT PNG'
+            Width: =489
+            X: =Parent.Width/2-Self.Width/2
+            Y: =40
+            ZIndex: =6
+
+        Button8 As button:
+            BorderColor: =
+            BorderThickness: =0
+            Color: =RGBA(51, 0, 153, 1)
+            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            Font: =App.Theme.Font
+            FontWeight: =FontWeight.Semibold
+            Height: =90
+            HoverBorderColor: =App.Theme.Colors.Darker10
+            HoverColor: =RGBA(184, 0, 0, 1)
+            HoverFill: =ColorFade(RGBA(00, 11, 11, 11), 11)
+            OnSelect: =Navigate('Forgot password',ScreenTransition.Cover)
+            PressedBorderColor: =App.Theme.Colors.Darker40
+            PressedColor: =Self.Color
+            PressedFill: =
+            Size: =24
+            Text: ="Forgot Password?"
+            Width: =448
+            X: =95
+            Y: =742
+            ZIndex: =8
+
+        Container5 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Bold
+            Height: =84
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =254
+            X: =200
+            Y: =866
+            ZIndex: =9
+
+            Button1_2 As button:
+                BorderColor: =App.Theme.Colors.Primary
+                BorderThickness: =0
+                DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Fill: =RGBA(51, 0, 153, 1)
+                Font: =App.Theme.Font
+                FontWeight: =FontWeight.Semibold
+                Height: =84
+                HoverBorderColor: =App.Theme.Colors.Darker10
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =App.Theme.Colors.Darker10
+                OnSelect: |-
+                    = If(
+                    !IsBlank(TextInput1_2.Text) && !IsBlank(TextInput1_3.Text),// Check if login fields are not blank
+                    If(
+                    !IsBlank(
+                    LookUp(
+                    Admin1,
+                    (Username = TextInput1_2.Text || User_email = TextInput1_2.Text)
+                    ).Username
+                    ),
+                    If(
+                    LookUp(
+                    Admin1,
+                    (Username = TextInput1_2.Text || User_email = TextInput1_2.Text)
+                    ).Password = TextInput1_3.Text,
+                    Set(CurrentUser, LookUp(Admin1, (Username = TextInput1_2.Text || User_email = TextInput1_2.Text)));
+                    Notify(
+                    "Login Successful!",
+                    NotificationType.Success
+                    )
+                    );
+                    Navigate('Home Screen'),// Navigate to HomeScreen with notification
+                    Notify(
+                    Set(Labeltxt,true); "Wrong Password Or Username",
+                    NotificationType.Error
+                    )// Show notification for incorrect login details
+                    ),
+                    Notify(
+                    "Please fill in both username and password.",
+                    NotificationType.Error
+                    )// Show notification for blank fields
+                    );
+                    Reset(TextInput1_2);
+                    Reset(TextInput1_3);
+                PressedBorderColor: =App.Theme.Colors.Darker40
+                PressedColor: =Self.Color
+                PressedFill: =App.Theme.Colors.Darker40
+                Size: =24
+                Text: ="Login"
+                Width: =258.25
+                X: =Parent.Width/2-Self.Width/2
+                ZIndex: =1
+
+        Icon5_2 As icon.View:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(51, 0, 153, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Icon: |
+                =If(Var_Password_Visible, Icon.View, Icon.Hide)
+            OnSelect: |-
+                =UpdateContext({Var_Password_Visible: !Var_Password_Visible});
+            Width: =46
+            X: =543
+            Y: =598
+            ZIndex: =10
+
+        Label1_5 As label:
+            Align: =Align.Center
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(184, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            FontWeight: =FontWeight.Semibold
+            Height: =68
+            Size: =20
+            Text: ="Incorrect UserName Or Password!"
+            Visible: =Labeltxt
+            Width: =571
+            X: =41
+            Y: =675
+            ZIndex: =11
+
+        Label1_8 As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(51, 0, 153, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            FontWeight: =FontWeight.Semibold
+            Height: =70
+            Size: =25
+            Text: ="Dont have an account?"
+            Width: =368
+            X: =95
+            Y: =972
+            ZIndex: =12
+

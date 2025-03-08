@@ -1,0 +1,61 @@
+{
+  "052a1c66-594a-41a1-b97c-4e4928e14132": {
+    "appActions": [],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "Office 365 Users",
+      "iconUri": "https://conn-afd-prod-endpoint-bmc9bqahasf3grgk.b01.azurefd.net/releases/v1.0.1732/1.0.1732.4070/office365users/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_office365users",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {},
+    "dataSources": [
+      "Office365Users"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "052a1c66-594a-41a1-b97c-4e4928e14132"
+  },
+  "7e980061-a34e-4e8f-9c15-7f1eb9ee4bb2": {
+    "appActions": [
+      "providers/PowerPlatform.Governance/Operations/Read",
+      "providers/PowerPlatform.Governance/Operations/Write"
+    ],
+    "connectionRef": {
+      "apiTier": "Standard",
+      "displayName": "SharePoint",
+      "iconUri": "https://conn-afd-prod-endpoint-bmc9bqahasf3grgk.b01.azurefd.net/releases/v1.0.1732/1.0.1732.4070/sharepointonline/icon.png",
+      "id": "/providers/microsoft.powerapps/apis/shared_sharepointonline",
+      "parameterHints": {},
+      "parameterHintsV2": {}
+    },
+    "datasets": {
+      "https://camanda.sharepoint.com": {
+        "dataSources": {
+          "Admin1": {
+            "tableName": "852135a1-5fb3-4ebf-bf3c-a514f6bd156d"
+          },
+          "Images": {
+            "tableName": "053c608b-5c23-48a7-a24e-71f2ad978517"
+          },
+          "Location_1": {
+            "tableName": "363817be-aab3-4059-8f77-76b3922fd8ad"
+          },
+          "Sign UPs": {
+            "tableName": "d9d1ea35-3f43-4076-8376-b1aa7c0878fc"
+          }
+        }
+      }
+    },
+    "dataSources": [
+      "Admin1",
+      "Location_1",
+      "Sign UPs",
+      "Images"
+    ],
+    "dependencies": {},
+    "dependents": [],
+    "id": "7e980061-a34e-4e8f-9c15-7f1eb9ee4bb2"
+  }
+}

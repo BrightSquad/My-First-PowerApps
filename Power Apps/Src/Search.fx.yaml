@@ -1,0 +1,157 @@
+"Search As screen.'phoneLayout_PeoplePicker_ver3.0'":
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+
+    RectQuickActionBar1 As rectangle:
+        BorderColor: =App.Theme.Colors.Darker40
+        Fill: =RGBA(51, 0, 153, 1)
+        Height: =114
+        Width: =Parent.Width
+        ZIndex: =1
+
+    TextSearchBox1 As text:
+        BorderColor: =App.Theme.Colors.Darker40
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =0
+        Color: =RGBA(0, 0, 0, 1)
+        Default: =selectedLocation
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        FocusedBorderThickness: =4
+        Font: =App.Theme.Font
+        Height: =70
+        HintText: ="Search Your  Preffered Location"
+        HoverBorderColor: =
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =
+        OnChange: |
+            =UpdateContext({ selectedLocation: TextSearchBox1.Text })
+        PaddingLeft: =90
+        PressedBorderColor: =
+        RadiusBottomLeft: =0
+        RadiusBottomRight: =0
+        RadiusTopLeft: =0
+        RadiusTopRight: =0
+        Size: =21
+        Width: =Parent.Width - Self.X * 2
+        Y: =192
+        ZIndex: =3
+
+    SearchIcon1 As icon.Search:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =App.Theme.Colors.Darker30
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Height: =Self.Width
+        Icon: =Icon.Search
+        PaddingBottom: =14
+        PaddingLeft: =14
+        PaddingRight: =14
+        PaddingTop: =14
+        Tooltip: ="Search"
+        Width: =TextSearchBox1.Height
+        X: =23
+        Y: =TextSearchBox1.Y
+        ZIndex: =4
+
+    RectSeparator1 As rectangle:
+        BorderColor: =App.Theme.Colors.Darker40
+        Fill: =App.Theme.Colors.Darker30
+        Height: =1
+        Width: =Parent.Width - Self.X * 2
+        Y: =TextSearchBox1.Y + TextSearchBox1.Height
+        ZIndex: =5
+
+    iconEmptyState1 As icon.Person:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =App.Theme.Colors.Darker30
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        DisplayMode: =DisplayMode.View
+        Icon: =Icon.Person
+        Visible: =
+        X: =Parent.Width / 2 - Self.Width/2
+        Y: =Parent.Height / 2 - Self.Height / 2 - 100
+        ZIndex: =7
+
+    Button4 As button:
+        BorderColor: =RGBA(51, 0, 153, 1)
+        DisabledBorderColor: =RGBA(244, 244, 244, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        Fill: =RGBA(51, 0, 153, 1)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Semibold
+        Height: =70
+        HoverBorderColor: =App.Theme.Colors.Darker10
+        HoverColor: =RGBA(255, 255, 255, 1)
+        HoverFill: =App.Theme.Colors.Darker10
+        OnSelect: |+
+            =If(
+                !IsBlank(TextSearchBox1.Text),
+                If(
+                    TextSearchBox1.Text = "Lekki Phase 1", Navigate('Lekki Area', ScreenTransition.None, {selectedLocation: TextSearchBox1.Text}),
+                    TextSearchBox1.Text = "Ikoyi", Navigate(Ikoyi, ScreenTransition.None, {selectedLocation: TextSearchBox1.Text}),
+                    TextSearchBox1.Text = "Victoria Island", Navigate(VI, ScreenTransition.None, {selectedLocation: TextSearchBox1.Text}),
+                     TextSearchBox1.Text = "Lagos Island", Navigate(Island, ScreenTransition.None, {selectedLocation: TextSearchBox1.Text}),
+                    Notify("No Listing Yet ", NotificationType.Error)
+                ),
+                Notify("Please enter a location", NotificationType.Error)
+            )
+            
+        PressedBorderColor: =App.Theme.Colors.Darker40
+        PressedColor: =Self.Color
+        PressedFill: =App.Theme.Colors.Darker40
+        Size: =24
+        Text: ="Search"
+        Width: =280
+        X: =159
+        Y: =860
+        ZIndex: =10
+
+    ComboBox1 As combobox:
+        BorderColor: =
+        BorderThickness: =0
+        ChevronBackground: =RGBA(0, 0, 0, 0)
+        ChevronDisabledBackground: =RGBA(184, 0, 0, 1)
+        ChevronDisabledFill: =RGBA(244, 244, 244, 1)
+        ChevronHoverBackground: =
+        ChevronHoverFill: =RGBA(0, 0, 0, 0)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        DisabledFill: =RGBA(244, 244, 244, 1)
+        DisplayFields: =["Value"]
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Semibold
+        Height: =82
+        HoverColor: =RGBA(0, 0, 0, 1)
+        HoverFill: =RGBA(0, 0, 0, 0)
+        Items: =Filter(Choices(Admin1.Location), StartsWith(Value, TextSearchBox1.Text))
+        OnChange: |
+            =UpdateContext({ selectedLocation: ComboBox1.Selected.Value });
+            UpdateContext({ selectedLocation: ComboBox1.Selected.Value });
+        PressedColor: =RGBA(255, 255, 255, 1)
+        PressedFill: =
+        SearchFields: =["Value"]
+        SearchItems: =Search(Filter(Choices(Admin1.Location),StartsWith(Value,TextSearchBox1.Text)),ComboBox1.SearchText,Value)
+        SelectionFill: =
+        SelectMultiple: =false
+        Size: =21
+        Visible: =!IsBlank(TextSearchBox1.Text)
+        Width: =629
+        X: =11
+        Y: =282
+        ZIndex: =12
+
+    Icon11 As icon.ArrowLeft:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(255, 255, 255, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Icon: =Icon.ArrowLeft
+        OnSelect: =Navigate('Home Screen',ScreenTransition.CoverRight)
+        X: =29
+        Y: =25
+        ZIndex: =13
+

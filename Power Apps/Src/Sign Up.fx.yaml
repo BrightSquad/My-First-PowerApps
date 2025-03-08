@@ -1,0 +1,371 @@
+"'Sign Up' As screen":
+    Fill: =RGBA(0, 0, 0, 0)
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+    OnVisible: |
+        =UpdateContext({Var_Password_Visible: false});
+        UpdateContext({Var_ConfirmPassword_Visible: false});
+
+    Container3 As groupContainer.manualLayoutContainer:
+        BorderStyle: =BorderStyle.None
+        BorderThickness: =2
+        DropShadow: =DropShadow.Bold
+        Fill: =RGBA(255, 255, 255, 1)
+        Height: =1136
+        RadiusBottomLeft: =20
+        RadiusBottomRight: =20
+        RadiusTopLeft: =20
+        RadiusTopRight: =20
+        Width: =638
+        ZIndex: =1
+
+        Button12_1 As button:
+            BorderColor: =
+            BorderStyle: =BorderStyle.None
+            BorderThickness: =0
+            Color: =RGBA(255, 136, 0, 1)
+            DisabledBorderColor: =RGBA(244, 244, 244, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Fill: =RGBA(0, 0, 0, 0)
+            Font: =App.Theme.Font
+            FontWeight: =FontWeight.Semibold
+            Height: =134
+            HoverBorderColor: =
+            HoverColor: =RGBA(184, 0, 0, 1)
+            HoverFill: =
+            OnSelect: =Navigate('Login Screen',ScreenTransition.CoverRight)
+            PressedBorderColor: =RGBA(0, 0, 0, 0)
+            PressedColor: =RGBA(0,0,0,0)
+            PressedFill: =
+            RadiusBottomLeft: =0
+            RadiusBottomRight: =0
+            RadiusTopLeft: =0
+            RadiusTopRight: =0
+            Size: =25
+            Text: =" Login"
+            Width: =196
+            X: =325
+            Y: =966
+            ZIndex: =1
+
+        "'Label11_3 Email' As label":
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            FontWeight: =FontWeight.Semibold
+            Height: =70
+            Size: =25
+            Text: ="Email*"
+            Width: =560
+            X: =Parent.Width/2-Self.Width/2
+            Y: =377
+            ZIndex: =2
+
+        "'Label11_4 Password' As label":
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            FontWeight: =FontWeight.Semibold
+            Height: =70
+            Size: =25
+            Text: ="Password*"
+            Width: =560
+            X: =Parent.Width/2-Self.Width/2
+            Y: =503
+            ZIndex: =3
+
+        "'Label11_5 username' As label":
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            FontWeight: =FontWeight.Semibold
+            Height: =70
+            Size: =25
+            Text: ="Username*"
+            Width: =560
+            X: =Parent.Width/2-Self.Width/2
+            Y: =227
+            ZIndex: =4
+
+        "'Label11_6 confirm password' As label":
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            FontWeight: =FontWeight.Semibold
+            Height: =70
+            Size: =25
+            Text: ="*Confirm Password"
+            Width: =560
+            X: =Parent.Width/2-Self.Width/2
+            Y: =637
+            ZIndex: =5
+
+        Username As text:
+            BorderColor: =RGBA(8, 17, 117, 1)
+            BorderThickness: =5
+            Color: =RGBA(0, 0, 0, 1)
+            Default: =
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =4
+            Font: =App.Theme.Font
+            Height: =70
+            HoverBorderColor: =App.Theme.Colors.Darker40
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            RadiusBottomLeft: =25
+            RadiusBottomRight: =25
+            RadiusTopLeft: =25
+            RadiusTopRight: =25
+            Size: =21
+            Width: =560
+            X: =Parent.Width/2-Self.Width/2
+            Y: =287
+            ZIndex: =6
+
+        Email As text:
+            BorderColor: =If(IsBlank(Self.Text),RGBA( 0, 18, 107, 1), If(IsMatch(Email.Text,Match.Email), RGBA(0, 18, 107, 1), Color.Red))
+            BorderThickness: =5
+            Color: =RGBA(0, 0, 0, 1)
+            Default: =""
+            DisabledBorderColor: =RGBA(51, 0, 153, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =4
+            Font: =App.Theme.Font
+            Height: =70
+            HoverBorderColor: =If(IsBlank(Email.Text), RGBA(0, 18, 107, 1))
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            RadiusBottomLeft: =25
+            RadiusBottomRight: =25
+            RadiusTopLeft: =25
+            RadiusTopRight: =25
+            Size: =21
+            Width: =560
+            X: =Parent.Width/2-Self.Width/2
+            Y: =433
+            ZIndex: =7
+
+        Password As text:
+            BorderColor: =If(IsBlank(Self.Text),RGBA( 0, 18, 107, 1),If(IsMatch(Password.Text,"^(?=.*[a-z])(?=.*[A-Z])(?=.*[\d]).{8,}$"),RGBA(0,18,107,1),Color.Red))
+            BorderThickness: =5
+            Color: =RGBA(0, 0, 0, 1)
+            Default: =
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =4
+            Font: =App.Theme.Font
+            Height: =70
+            HoverBorderColor: =Self.BorderColor
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Mode: =If(Var_Password_Visible,TextMode.SingleLine, TextMode.Password)
+            RadiusBottomLeft: =25
+            RadiusBottomRight: =25
+            RadiusTopLeft: =25
+            RadiusTopRight: =25
+            Size: =21
+            Width: =560
+            X: =Parent.Width/2-Self.Width/2
+            Y: =564
+            ZIndex: =8
+
+        "'Confirm Password' As text":
+            BorderColor: =If(Self.Text =Password.Text, RGBA(0,18, 107, 1), Color.Red)
+            BorderThickness: =5
+            Color: =RGBA(0, 0, 0, 1)
+            Default: =""
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            FocusedBorderThickness: =4
+            Font: =App.Theme.Font
+            Height: =70
+            HoverBorderColor: =Self.BorderColor
+            HoverColor: =RGBA(0, 0, 0, 1)
+            HoverFill: =RGBA(0, 0, 0, 0)
+            Mode: =If(Var_ConfirmPassword_Visible,TextMode.SingleLine, TextMode.Password)
+            RadiusBottomLeft: =25
+            RadiusBottomRight: =25
+            RadiusTopLeft: =25
+            RadiusTopRight: =25
+            Size: =21
+            Width: =560
+            X: =Parent.Width/2-Self.Width/2
+            Y: =697
+            ZIndex: =9
+
+        Container4 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Bold
+            Fill: =RGBA(51, 0, 153, 1)
+            Height: =101
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Width: =314
+            X: =Parent.Width/2-Self.Width/2
+            Y: =865
+            ZIndex: =10
+
+            Button12_2 As button:
+                BorderColor: =
+                DisabledBorderColor: =RGBA(244, 244, 244, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                DisplayMode: =If(IsMatch(Email.Text,Match.Email) &&IsMatch(Password.Text,"^(?=.*[a-z])(?=.*[A-Z])(?=.*[\d]).{8,}$") &&'Confirm Password'.Text = Password.Text,DisplayMode.Edit, DisplayMode.View)
+                Fill: =RGBA(51, 0, 153, 1)
+                Font: =App.Theme.Font
+                FontWeight: =FontWeight.Semibold
+                Height: =70
+                HoverBorderColor: =App.Theme.Colors.Darker10
+                HoverColor: =RGBA(255, 255, 255, 1)
+                HoverFill: =RGBA(0, 0, 0, 0)
+                OnSelect: |
+                    =IfError(
+                        Patch(
+                            Admin1,
+                            Defaults(Admin1),
+                            {
+                                Username: Username.Text,
+                                User_email: Email.Text,
+                                Password: Password.Text
+                            }
+                        ),
+                        Notify(
+                            "Email or Username already exist: ",
+                            NotificationType.Error
+                        ),
+                        Notify(
+                            "You have successfully Sign Up",
+                            NotificationType.Success
+                        );
+                        Navigate('Login Screen', ScreenTransition.Fade)
+                    );
+                    Reset(Username);
+                    Reset(Email);
+                    Reset(Password);
+                    Reset('Confirm Password');
+                PressedBorderColor: =
+                PressedColor: =Self.Color
+                PressedFill: =
+                Size: =24
+                Text: ="SIGN UP"
+                Width: =280
+                X: =17
+                Y: =14
+                ZIndex: =1
+
+        Rectangle1 As rectangle:
+            BorderColor: =App.Theme.Colors.Darker40
+            BorderThickness: =0.25
+            Fill: =RGBA(51, 0, 153, 1)
+            Height: =103
+            Width: =638
+            ZIndex: =11
+
+        Icon6_1 As icon.CancelBadge:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Height: =46
+            Icon: =Icon.CancelBadge
+            OnSelect: =Navigate('Login Screen',ScreenTransition.Cover)
+            Width: =36
+            X: =564
+            Y: =29
+            ZIndex: =12
+
+        Label13 As label:
+            Align: =Align.Center
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            FocusedBorderThickness: =15
+            Font: =App.Theme.Font
+            FontWeight: =FontWeight.Bold
+            Height: =104
+            Size: =30
+            Text: ="Sign Up Here"
+            Width: =288
+            X: =175
+            ZIndex: =13
+
+        Label17 As label:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(0, 0, 0, 1)
+            DisabledColor: =RGBA(166, 166, 166, 1)
+            Font: =App.Theme.Font
+            Height: =70
+            Size: =21
+            Text: =IsEmpty(Filter(Admin1,User_email =User().Email))
+            Visible: =false
+            Width: =560
+            X: =70
+            Y: =794
+            ZIndex: =18
+
+    Icon5 As icon.View:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(8, 17, 117, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Height: =61
+        Icon: =If(Var_Password_Visible, Icon.Hide, Icon.View)
+        OnSelect: |-
+            =UpdateContext({Var_Password_Visible: !Var_Password_Visible})
+        Width: =67
+        X: =504
+        Y: =569
+        ZIndex: =2
+
+    Label10 As label:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        Height: =10
+        Size: =21
+        Text: |-
+            =IsMatch(Password.Text,"^(?=(.*[a-z]){3,})(?=(.*[A-Z]){2,})(?=(.*[0-9]){2,})(?=(.*[!@#$%^&*()\-__+.]){1,}).{8,}$")
+        Visible: =false
+        Width: =560
+        X: =40
+        ZIndex: =4
+
+    Icon5_1 As icon.View:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(8, 17, 117, 1)
+        DisabledBorderColor: =RGBA(166, 166, 166, 1)
+        DisabledColor: =RGBA(244, 244, 244, 1)
+        Height: =60
+        Icon: =Icon.View
+        OnSelect: |-
+            =UpdateContext({Var_ConfirmPassword_Visible: !Var_ConfirmPassword_Visible});
+        Width: =67
+        X: =504
+        Y: =700
+        ZIndex: =5
+
+    Label9 As label:
+        BorderColor: =App.Theme.Colors.Darker40
+        Color: =RGBA(0, 0, 0, 1)
+        DisabledColor: =RGBA(166, 166, 166, 1)
+        Font: =App.Theme.Font
+        FontWeight: =FontWeight.Semibold
+        Height: =60
+        Size: =25
+        Text: ="Already a User?"
+        Width: =263
+        X: =128
+        Y: =1002
+        ZIndex: =7
+

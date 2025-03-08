@@ -1,0 +1,14 @@
+Ikoyi As screen:
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+
+    Container31 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =1136
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =640
+        ZIndex: =1
+

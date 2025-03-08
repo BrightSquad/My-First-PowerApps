@@ -1,0 +1,86 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+# Content may be incomplete and subject to change.
+# This file is read-only and should only be used to review changes made within Power Apps Studio.
+# This file isn't used when loading the app. External editing, merging and conflict resolution are
+# not supported.
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  Listing:
+    Children:
+      - Container24:
+          Control: GroupContainer@1.3.0
+          Variant: ManualLayout
+          Properties:
+            Height: =1136
+            Width: =640
+          Children:
+            - Container25:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.Bold
+                  Height: =247
+                  Width: =566
+                  X: =36
+                  Y: =232
+                Children:
+                  - Image4_7:
+                      Control: Image@2.2.3
+                      Properties:
+                        BorderColor: =RGBA(255, 255, 255, 1)
+                        BorderThickness: =10
+                        Height: =247
+                        Image: ='11'
+                        ImagePosition: =ImagePosition.Stretch
+                        Width: =566
+            - Container25_1:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  DropShadow: =DropShadow.Bold
+                  Height: =247
+                  Width: =566
+                  X: =36
+                  Y: =513
+                Children:
+                  - Video2_1:
+                      Control: Video@2.4.1
+                      Properties:
+                        AutoStart: =true
+                        Fill: =RGBA(51, 0, 153, 1)
+                        Height: =247
+                        Loop: =true
+                        Media: ='Rent The Perfect Travel (1)'
+                        ShowControls: =false
+                        StartTime: =1
+                        Width: =566
+            - Label8:
+                Control: Label@2.5.1
+                Properties:
+                  Color: =RGBA(51, 0, 153, 1)
+                  FontWeight: =FontWeight.Bold
+                  Italic: =true
+                  Size: =30
+                  Text: ="OUR NEW LISTINGS"
+                  Width: =405
+                  X: =133
+                  Y: =74
+            - Container27:
+                Control: GroupContainer@1.3.0
+                Variant: ManualLayout
+                Properties:
+                  Height: =94
+                  Width: =636
+                  Y: =1040
+                Children:
+                  - Icon3:
+                      Control: Classic/Icon@2.5.0
+                      Properties:
+                        Color: =
+                        Icon: =Icon.BackArrow
+                        OnSelect: =Navigate('Home Screen',ScreenTransition.CoverRight)
+                        X: =60
+                        Y: =12

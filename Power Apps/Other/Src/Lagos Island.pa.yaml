@@ -1,0 +1,74 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+# Content may be incomplete and subject to change.
+# This file is read-only and should only be used to review changes made within Power Apps Studio.
+# This file isn't used when loading the app. External editing, merging and conflict resolution are
+# not supported.
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  Lagos Island:
+    Children:
+      - Container23:
+          Control: GroupContainer@1.3.0
+          Variant: ManualLayout
+          Properties:
+            Height: =1135
+            Width: =640
+          Children:
+            - Image4_9:
+                Control: Image@2.2.3
+                Properties:
+                  BorderColor: =RGBA(255, 255, 255, 1)
+                  BorderThickness: =10
+                  Height: =261
+                  Image: ='white house'
+                  ImagePosition: =ImagePosition.Stretch
+                  RadiusBottomLeft: =80
+                  RadiusBottomRight: =80
+                  RadiusTopLeft: =80
+                  RadiusTopRight: =80
+                  Width: =477
+                  X: =82
+                  Y: =264
+            - Image4_10:
+                Control: Image@2.2.3
+                Properties:
+                  BorderColor: =RGBA(255, 255, 255, 1)
+                  BorderThickness: =10
+                  Height: =261
+                  Image: ='Bed Room'
+                  ImagePosition: =ImagePosition.Stretch
+                  RadiusBottomLeft: =80
+                  RadiusBottomRight: =80
+                  RadiusTopLeft: =80
+                  RadiusTopRight: =80
+                  Width: =477
+                  X: =82
+                  Y: =471
+            - Image4_11:
+                Control: Image@2.2.3
+                Properties:
+                  BorderColor: =RGBA(255, 255, 255, 1)
+                  BorderThickness: =10
+                  Height: =261
+                  Image: ='Sweet Sitting room'
+                  ImagePosition: =ImagePosition.Stretch
+                  RadiusBottomLeft: =80
+                  RadiusBottomRight: =80
+                  RadiusTopLeft: =80
+                  RadiusTopRight: =80
+                  Width: =477
+                  X: =82
+                  Y: =687
+            - Icon11_1:
+                Control: Classic/Icon@2.5.0
+                Properties:
+                  Color: =RGBA(51, 0, 153, 1)
+                  Height: =110
+                  Icon: =Icon.ArrowLeft
+                  OnSelect: =Navigate('Home Screen',ScreenTransition.CoverRight)
+                  Width: =80
+                  X: =34
+                  Y: =10

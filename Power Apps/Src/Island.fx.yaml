@@ -1,0 +1,157 @@
+Island As screen:
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+
+    Container29 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.Light
+        Height: =1136
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =640
+        ZIndex: =1
+
+        Image4_17 As image:
+            BorderColor: =RGBA(255, 255, 255, 1)
+            BorderThickness: =10
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledFill: =RGBA(244, 244, 244, 1)
+            Height: =227
+            Image: ='new building 4'
+            ImagePosition: =ImagePosition.Stretch
+            RadiusBottomLeft: =80
+            RadiusBottomRight: =80
+            RadiusTopLeft: =80
+            RadiusTopRight: =80
+            Width: =394
+            X: =40
+            Y: =612
+            ZIndex: =1
+
+        Container13_2 As groupContainer.manualLayoutContainer:
+            BorderColor: =RGBA(0, 0, 0, 0)
+            BorderThickness: =10
+            DropShadow: =DropShadow.ExtraBold
+            Height: =328
+            RadiusBottomLeft: =180
+            RadiusBottomRight: =180
+            RadiusTopLeft: =180
+            RadiusTopRight: =180
+            Width: =532
+            X: =104
+            Y: =251
+            ZIndex: =2
+
+            Video1_1 As videoPlayback:
+                BorderColor: =RGBA(0, 0, 0, 0)
+                BorderThickness: =10
+                DisplayMode: =DisplayMode.View
+                Fill: =
+                Height: =Parent.Height
+                ImagePosition: =ImagePosition.Stretch
+                Media: ='Rent The Perfect Travel (2)'
+                Width: =Parent.Width
+                ZIndex: =1
+
+        Icon6_2 As icon.ArrowLeft:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(51, 0, 153, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Icon: =Icon.ArrowLeft
+            OnSelect: =Navigate(Search,ScreenTransition.CoverRight)
+            X: =40
+            Y: =40
+            ZIndex: =3
+
+        Icon8_1 As icon.ArrowRight:
+            BorderColor: =App.Theme.Colors.Darker40
+            Color: =RGBA(51, 0, 153, 1)
+            DisabledBorderColor: =RGBA(166, 166, 166, 1)
+            DisabledColor: =RGBA(244, 244, 244, 1)
+            Icon: =Icon.ArrowRight
+            OnSelect: =Navigate('Apartment Video',ScreenTransition.Cover)
+            X: =536
+            Y: =40
+            ZIndex: =4
+
+        Container32 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.ExtraBold
+            Height: =223
+            RadiusBottomLeft: =4
+            RadiusBottomRight: =4
+            RadiusTopLeft: =4
+            RadiusTopRight: =4
+            Width: =640
+            Y: =912
+            ZIndex: =5
+
+            Label22 As label:
+                Align: =Align.Center
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =App.Theme.Font
+                FontWeight: =FontWeight.Semibold
+                Height: =70
+                Size: =21
+                Text: ="Standard 3 Bedroom flat, located in the heart of Lagos Island"
+                Width: =560
+                X: =40
+                Y: =40
+                ZIndex: =1
+
+            Label22_1 As label:
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =RGBA(0, 0, 0, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =App.Theme.Font
+                FontWeight: =FontWeight.Semibold
+                Height: =70
+                Size: =21
+                Text: |-
+                    ="Price: 2.3 Million"
+                Width: =259
+                Y: =153
+                ZIndex: =2
+
+        Container33 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Light
+            Fill: =RGBA(51, 0, 153, 1)
+            Height: =73
+            RadiusBottomLeft: =15
+            RadiusBottomRight: =15
+            RadiusTopLeft: =15
+            RadiusTopRight: =15
+            Width: =324
+            X: =24
+            Y: =145
+            ZIndex: =7
+
+            Icon14_1 As icon.CheckBadge:
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =RGBA(255, 128, 0, 1)
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledColor: =RGBA(244, 244, 244, 1)
+                Height: =52
+                Icon: =Icon.CheckBadge
+                Width: =62
+                X: =9
+                Y: =9
+                ZIndex: =1
+
+            Label21 As label:
+                BorderColor: =App.Theme.Colors.Darker40
+                Color: =RGBA(255, 255, 255, 1)
+                DisabledColor: =RGBA(166, 166, 166, 1)
+                Font: =App.Theme.Font
+                FontWeight: =FontWeight.Semibold
+                Height: =70
+                Size: =21
+                Text: |-
+                    ="Available:Now"
+                Width: =225
+                X: =71
+                ZIndex: =2
+

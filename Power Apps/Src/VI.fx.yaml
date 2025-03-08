@@ -1,0 +1,103 @@
+VI As screen:
+    BackgroundImage: =
+    Fill: =Color.White
+    LoadingSpinnerColor: =App.Theme.Colors.Primary
+
+    Container15 As groupContainer.manualLayoutContainer:
+        DropShadow: =DropShadow.ExtraBold
+        Height: =1136
+        RadiusBottomLeft: =4
+        RadiusBottomRight: =4
+        RadiusTopLeft: =4
+        RadiusTopRight: =4
+        Width: =640
+        ZIndex: =1
+
+        Container16 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Semibold
+            Height: =338
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Width: =504
+            X: =66
+            Y: =509
+            ZIndex: =3
+
+            Image4_14 As image:
+                BorderColor: =RGBA(255, 255, 255, 1)
+                BorderThickness: =10
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =315
+                Image: ='Stairs '
+                ImagePosition: =ImagePosition.Fill
+                RadiusBottomLeft: =80
+                RadiusBottomRight: =80
+                RadiusTopLeft: =80
+                RadiusTopRight: =80
+                Width: =470
+                X: =18
+                Y: =6
+                ZIndex: =1
+
+        Container16_1 As groupContainer.manualLayoutContainer:
+            DropShadow: =DropShadow.Semibold
+            Height: =332
+            RadiusBottomLeft: =20
+            RadiusBottomRight: =20
+            RadiusTopLeft: =20
+            RadiusTopRight: =20
+            Width: =496
+            X: =57
+            Y: =142
+            ZIndex: =4
+
+            Image4_13 As image:
+                BorderColor: =RGBA(255, 255, 255, 1)
+                BorderThickness: =10
+                DisabledBorderColor: =RGBA(166, 166, 166, 1)
+                DisabledFill: =RGBA(244, 244, 244, 1)
+                Height: =315
+                Image: =Apartment5
+                ImagePosition: =ImagePosition.Stretch
+                RadiusBottomLeft: =80
+                RadiusBottomRight: =80
+                RadiusTopLeft: =80
+                RadiusTopRight: =80
+                Width: =470
+                X: =14
+                Y: =8
+                ZIndex: =1
+
+        Button3_2 As button:
+            BorderColor: =App.Theme.Colors.Primary
+            BorderThickness: =0
+            Color: =RGBA(250, 247, 255, 1)
+            DisabledBorderColor: =RGBA(255, 255, 255, 1)
+            DisabledColor: =RGBA(255, 255, 255, 1)
+            DisabledFill: =RGBA(255, 255, 255, 1)
+            Fill: =RGBA(51, 0, 153, 1)
+            Font: =App.Theme.Font
+            FontWeight: =FontWeight.Bold
+            Height: =81
+            HoverBorderColor: =App.Theme.Colors.Darker10
+            HoverColor: =RGBA(255, 250, 250, 0)
+            HoverFill: =RGBA(51, 0, 153, 1)
+            OnSelect: =Navigate(Screen4,ScreenTransition.Cover)
+            PressedBorderColor: =
+            PressedColor: =RGBA(255, 255, 255, 1)
+            PressedFill: =
+            RadiusBottomLeft: =25
+            RadiusBottomRight: =25
+            RadiusTopLeft: =25
+            RadiusTopRight: =25
+            Size: =24
+            TabIndex: =8
+            Text: ="Next"
+            Width: =330
+            X: =153
+            Y: =981
+            ZIndex: =5
+

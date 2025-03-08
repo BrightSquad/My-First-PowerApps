@@ -1,0 +1,22 @@
+# ************************************************************************************************
+# Warning: YAML source code for Canvas Apps is in preview. The schema is being actively developed.
+# Content may be incomplete and subject to change.
+# This file is read-only and should only be used to review changes made within Power Apps Studio.
+# This file isn't used when loading the app. External editing, merging and conflict resolution are
+# not supported.
+# 
+# For more information, visit https://go.microsoft.com/fwlink/?linkid=2292623
+# ************************************************************************************************
+Screens:
+  Screen1:
+    Children:
+      - Icon3_2:
+          Control: Classic/Icon@2.5.0
+          Properties:
+            Color: =RGBA(51, 0, 153, 1)
+            Height: =114
+            Icon: =Icon.ArrowLeft
+            OnSelect: =Navigate('Home Screen',ScreenTransition.CoverRight)
+            Width: =101
+            X: =137
+            Y: =946
