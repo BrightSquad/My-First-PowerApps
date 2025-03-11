@@ -181,7 +181,7 @@ Screens:
                 Control: Classic/Icon@2.5.0
                 Properties:
                   Color: =RGBA(51, 0, 153, 1)
-                  Icon: |+
+                  Icon: |
                     =If(Var_Password_Visible, Icon.View, Icon.Hide)
                   OnSelect: |-
                     =UpdateContext({Var_Password_Visible: !Var_Password_Visible});

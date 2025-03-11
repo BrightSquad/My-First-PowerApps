@@ -25,7 +25,7 @@ Screens:
             HintText: ="Search Your  Preffered Location"
             HoverBorderColor: =
             HoverFill: =
-            OnChange: |+
+            OnChange: |
               =UpdateContext({ selectedLocation: TextSearchBox1.Text })
             PaddingLeft: =90
             PressedBorderColor: =
@@ -101,7 +101,7 @@ Screens:
             Height: =82
             HoverFill: =RGBA(0, 0, 0, 0)
             Items: =Filter(Choices(Admin1.Location), StartsWith(Value, TextSearchBox1.Text))
-            OnChange: |+
+            OnChange: |
               =UpdateContext({ selectedLocation: ComboBox1.Selected.Value });
               UpdateContext({ selectedLocation: ComboBox1.Selected.Value });
             PressedColor: =RGBA(255, 255, 255, 1)

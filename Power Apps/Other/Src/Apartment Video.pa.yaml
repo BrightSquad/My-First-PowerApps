@@ -182,7 +182,7 @@ Screens:
                             Properties:
                               Height: =71
                               Image: =whatsapp
-                              OnSelect: |+
+                              OnSelect: |
                                 =Launch("https://wa.me/+2348178751048?text=Hello%20is%20this%20still%20available")
                               Width: =73
                               X: =111
@@ -192,7 +192,7 @@ Screens:
                             Properties:
                               Height: =74
                               Image: ='44333e70-3f51-4d65-ac20-8b18e334f246'
-                              OnSelect: |+
+                              OnSelect: |
                                 =Launch("tel:+2348178751048")
                               Width: =81
                               X: =201
@@ -201,7 +201,7 @@ Screens:
                             Control: Label@2.5.1
                             Properties:
                               Height: =44
-                              OnSelect: |+
+                              OnSelect: |
                                 =Launch("tel:+2347010559667") &
                                 Launch("https://wa.me/+2348178751048?text=Hello%20is%20this%20still%20available")
                               Text: ="+2348178751048"

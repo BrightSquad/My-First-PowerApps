@@ -11,7 +11,7 @@ Screens:
   Sign Up:
     Properties:
       Fill: =RGBA(0, 0, 0, 0)
-      OnVisible: |+
+      OnVisible: |
         =UpdateContext({Var_Password_Visible: false});
         UpdateContext({Var_ConfirmPassword_Visible: false});
     Children:
